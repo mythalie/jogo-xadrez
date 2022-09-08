@@ -1,6 +1,8 @@
 package br.com.curso.xadrez.projetoxadrez.chess;
 
-public class ChessException extends RuntimeException {
+import br.com.curso.xadrez.projetoxadrez.boardgame.BoardException;
+
+public class ChessException extends BoardException {
     private static final long serialVersionUID = 1L;
 
     public ChessException(String msg) {
