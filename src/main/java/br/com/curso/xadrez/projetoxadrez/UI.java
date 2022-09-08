@@ -1,5 +1,6 @@
 package br.com.curso.xadrez.projetoxadrez;
 
+import br.com.curso.xadrez.projetoxadrez.chess.ChessMatch;
 import br.com.curso.xadrez.projetoxadrez.chess.ChessPiece;
 import br.com.curso.xadrez.projetoxadrez.chess.ChessPosition;
 import br.com.curso.xadrez.projetoxadrez.chess.Color;
@@ -45,6 +46,13 @@ public class UI {
         catch (RuntimeException e) {
             throw new InputMismatchException("Error reading ChessPosition. Valid values are from a1 to h8.");
         }
+    }
+
+    public static void printMatch(ChessMatch chessMatch) {
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
     }
 
     public static void printBoard(ChessPiece[][] pieces) {
